@@ -1,31 +1,12 @@
 "use client"
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 
 const Navbar = () => {
-    const [scrolled, setScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const isScrolled = window.scrollY > 20;
-            setScrolled(isScrolled);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
     return (
-        <nav 
-            className={`
-                fixed top-0 w-full z-50 transition-all duration-300
-                ${scrolled 
-                    ? 'bg-[#200630]/70 backdrop-blur-md shadow-lg' 
-                    : 'bg-transparent'
-                }
-            `}
-        >
+        <nav className="fixed top-0 w-full z-50 bg-[#200630]/70 backdrop-blur-md shadow-lg transition-all duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
