@@ -103,13 +103,9 @@ const Footer = () => {
           </div>
           
           <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
-            <p className="text-sm text-gray-400">&copy; 2025 ImmerseGT. All rights reserved.</p>
-            <Link href="/privacy" className="text-sm text-gray-400 hover:text-purple-400 transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="text-sm text-gray-400 hover:text-purple-400 transition-colors">
-              Terms of Service
-            </Link>
+            <p className="text-sm text-gray-400">
+                &copy; 2025 ImmerseGT. All rights reserved &nbsp;|&nbsp; Designed and Developed by <span className='hover:cursor-pointer' onClick={() => (window.location.href = "https://revlord.vercel.app")}>Revanth Burramukku</span>
+            </p>
           </div>
         </div>
       </div>

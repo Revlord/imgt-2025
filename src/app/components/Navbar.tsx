@@ -21,7 +21,7 @@ const Navbar = () => {
             className={`
                 fixed top-0 w-full z-50 transition-all duration-300
                 ${scrolled 
-                    ? 'bg-violet-950/80 backdrop-blur-md shadow-lg' 
+                    ? 'bg-[#200630] backdrop-blur-md shadow-lg' 
                     : 'bg-transparent'
                 }
             `}
@@ -42,38 +42,39 @@ const Navbar = () => {
                     {/* Desktop Navigation Links */}
                     <div className="hidden md:block">
                         <div className="ml-10 flex items-center space-x-8">
+                            <Link
+                                href="#sponsors"
+                                className="text-violet-200/80 hover:text-violet-700 transition-colors"
+                            >
+                                Sponsors
+                            </Link>
+                            <Link
+                                href="#judges"
+                                className="text-violet-200/80 hover:text-violet-700 transition-colors"
+                            >
+                                Speakers
+                            </Link>
                             <Link 
-                            href="/schedule"
-                            className="text-violet-200/80 hover:text-violet-700 transition-colors"
+                                href="#schedule"
+                                className="text-violet-200/80 hover:text-violet-700 transition-colors"
                             >
-                            Schedule
+                                Schedule
                             </Link>
                             <Link
-                            href="/sponsors"
-                            className="text-violet-200/80 hover:text-violet-700 transition-colors"
+                                href="#photos"
+                                className="text-violet-200/80 hover:text-violet-700 transition-colors"
                             >
-                            Sponsors
+                                Photos
                             </Link>
                             <Link
-                            href="/speakers"
-                            className="text-violet-200/80 hover:text-violet-700 transition-colors"
+                                href="#faq"
+                                className="text-violet-200/80 hover:text-violet-700 transition-colors"
                             >
-                            Speakers
-                            </Link>
-                            <Link
-                            href="/tracks"
-                            className="text-violet-200/80 hover:text-violet-700 transition-colors"
-                            >
-                            Tracks
-                            </Link>
-                            <Link
-                            href="/faqs"
-                            className="text-violet-200/80 hover:text-violet-700 transition-colors"
-                            >
-                            FAQs
+                                FAQs
                             </Link>
                             <button
                                 className="px-6 py-2 rounded-full bg-gradient-to-r from-violet-600 to-violet-800 text-white font-medium hover:from-violet-700 hover:to-violet-900 transition-colors duration-300"
+                                onClick={() => (window.location.href = "https://lu.ma/fscb1e9s?tk=rLagDy")}
                             >
                                 Apply Now
                             </button>
@@ -82,33 +83,33 @@ const Navbar = () => {
 
                     {/* Mobile menu button */}
                     <div className="md:hidden">
-                    <button
-                        onClick={() => setIsOpen(!isOpen)}
-                        className="flex items-center justify-center w-10 h-10 text-violet-200/80 hover:text-violet-700"
-                        aria-label="Main menu"
-                    >
-                        <div className="relative w-6 h-6">
-                        <span
-                            className={`absolute h-0.5 w-6 bg-current transform transition-all duration-300 ease-in-out ${
-                            isOpen ? 'rotate-45 translate-y-0' : '-translate-y-2'
-                            }`}
-                        />
-                        <span
-                            className={`absolute h-0.5 w-6 bg-current transform transition-all duration-300 ease-in-out ${
-                            isOpen ? 'opacity-0' : 'opacity-100'
-                            }`}
-                        />
-                        <span
-                            className={`absolute h-0.5 w-6 bg-current transform transition-all duration-300 ease-in-out ${
-                            isOpen ? '-rotate-45 translate-y-0' : 'translate-y-2'
-                            }`}
-                        />
-                        </div>
-                    </button>
+                        <button
+                            onClick={() => setIsOpen(!isOpen)}
+                            className="flex items-center justify-center w-10 h-10 text-violet-200/80 hover:text-violet-700"
+                            aria-label="Main menu"
+                        >
+                            <div className="relative w-6 h-6">
+                                <span
+                                    className={`absolute h-0.5 w-6 bg-current transform transition-all duration-300 ease-in-out ${
+                                        isOpen ? 'rotate-45 translate-y-0' : '-translate-y-2'
+                                    }`}
+                                />
+                                <span
+                                    className={`absolute h-0.5 w-6 bg-current transform transition-all duration-300 ease-in-out ${
+                                        isOpen ? 'opacity-0' : 'opacity-100'
+                                    }`}
+                                />
+                                <span
+                                    className={`absolute h-0.5 w-6 bg-current transform transition-all duration-300 ease-in-out ${
+                                        isOpen ? '-rotate-45 translate-y-0' : 'translate-y-2'
+                                    }`}
+                                />
+                            </div>
+                        </button>
                     </div>
                 </div>
             </div>
-
+            
             {/* Mobile menu */}
             <div
                 className={`
@@ -117,31 +118,40 @@ const Navbar = () => {
                 `}
                 style={{ top: '64px' }}
             >
-                <div className="p-4 space-y-6">
-                    <Link 
-                        href="/about"
-                        className="block text-violet-200/80 hover:text-violet-700 transition-colors text-lg py-2"
-                        onClick={() => setIsOpen(false)}
+                <div className="p-4 flex flex-col space-y-6">
+                    <Link
+                        href="#sponsors"
+                        className="block text-violet-200/80 hover:text-violet-700 transition-colors"
                     >
-                        About
+                        Sponsors
+                    </Link>
+                    <Link
+                        href="#judges"
+                        className="block text-violet-200/80 hover:text-violet-700 transition-colors"
+                    >
+                        Speakers
                     </Link>
                     <Link 
-                        href="/projects"
-                        className="block text-violet-200/80 hover:text-violet-700 transition-colors text-lg py-2"
-                        onClick={() => setIsOpen(false)}
+                        href="#schedule"
+                        className="block text-violet-200/80 hover:text-violet-700 transition-colors"
                     >
-                        Projects
+                        Schedule
                     </Link>
-                    <Link 
-                        href="/contact"
-                        className="block text-violet-200/80 hover:text-violet-700 transition-colors text-lg py-2"
-                        onClick={() => setIsOpen(false)}
+                    <Link
+                        href="#photos"
+                        className="block text-violet-200/80 hover:text-violet-700 transition-colors"
                     >
-                        Contact
+                        Photos
+                    </Link>
+                    <Link
+                        href="#faq"
+                        className="block text-violet-200/80 hover:text-violet-700 transition-colors"
+                    >
+                        FAQs
                     </Link>
                     <button
-                        className="w-full px-6 py-3 rounded-full bg-gradient-to-r from-violet-600 to-violet-800 text-white font-medium hover:from-violet-700 hover:to-violet-900 transition-colors duration-300"
-                        onClick={() => setIsOpen(false)}
+                        className="px-6 py-2 rounded-full bg-gradient-to-r from-violet-600 to-violet-800 text-white font-medium hover:from-violet-700 hover:to-violet-900 transition-colors duration-300"
+                        onClick={() => (window.location.href = "https://lu.ma/fscb1e9s?tk=rLagDy")}
                     >
                         Apply Now
                     </button>

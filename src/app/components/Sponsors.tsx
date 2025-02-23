@@ -14,15 +14,14 @@ export function Sponsors() {
       className={twMerge(
         "relative w-full overflow-hidden py-16",
         // Purple-to-dark gradient background
-        "bg-gradient-to-b from-violet-950/50 to-[#000000]"
+        "bg-gradient-to-b from-[#1C121E] via-[#200630] to-[#09080C]"
       )}
     >
       {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-violet-950/30 via-transparent to-transparent" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Main Title */}
-        <h2 className="text-center text-3xl sm:text-4xl font-bold mb-10 text-white">
+        <h2 className="text-center text-6xl xs:text-3xl font-bold mb-10 text-white">
           Meet our 2025 sponsors
         </h2>
         {/* Unicorn Sponsor */}

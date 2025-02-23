@@ -10,12 +10,24 @@ import FAQPage from "./components/FAQ";
 export default function Home() {
   return (
     <div className="min-h-screen flex-col">
-      <ShootingStarsAndStarsBackgroundDemo/>
-      <Sponsors/>
-      <Judges/>
-      <PhotoCarousel/>
-      <Schedule/>
-      <FAQPage/>
+      <a id="home">
+        <ShootingStarsAndStarsBackgroundDemo/>
+      </a>
+      <a id="sponsors">
+        <Sponsors/>
+      </a>
+      <a id="judges">
+        <Judges/>
+      </a>
+      <a id="photos">
+        <PhotoCarousel/>
+      </a>
+      <a id="schedule">
+        <Schedule/>
+      </a>
+      <a id="faq">
+        <FAQPage/>
+      </a>
     </div>
   );
 }

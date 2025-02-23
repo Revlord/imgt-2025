@@ -9,7 +9,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
   return (
     <div className="relative h-[55-rem] w-full flex flex-col items-center justify-start bg-[#0F0013] overflow-hidden">
       {/* Gradient overlay covering the entire section */}
-      <div className="absolute inset-0 bg-gradient-to-t from-violet-950/50 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#1C121E] via-[#200630] to-[#09080C]" />
 
       {/* Animated backgrounds (stars) */}
       <ShootingStars />
@@ -44,12 +44,17 @@ export function ShootingStarsAndStarsBackgroundDemo() {
 
         {/* Buttons */}
         <div className="mt-8 flex flex-col md:flex-row gap-4 items-center">
-          <button className="px-8 py-3 rounded-full bg-violet-600 text-white font-medium hover:bg-violet-800 transition-colors duration-300 flex items-center gap-2">
+          <button
+            className="px-8 py-3 rounded-full bg-violet-600 text-white font-medium hover:bg-violet-800 transition-colors duration-300 flex items-center gap-2"
+            onClick={() => (window.location.href = "https://lu.ma/fscb1e9s?tk=rLagDy")}
+          >
             Apply Now <ArrowRight className="inline-block" />
           </button>
-          <button className="px-8 py-3 rounded-full border border-violet-500/30 text-violet-300 font-medium hover:bg-violet-950/30 transition-colors duration-300">
+            <button 
+            onClick={() => (window.location.href = "#faq")} 
+            className="px-8 py-3 rounded-full border border-violet-500/30 text-violet-300 font-medium hover:bg-violet-950/30 transition-colors duration-300">
             Learn More
-          </button>
+            </button>
         </div>
 
         {/* Co-hosted by section */}

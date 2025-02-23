@@ -9,7 +9,7 @@ export function Schedule() {
   const scheduleData = [
     {
       day: "Friday",
-      date: "Oct 25",
+      date: "April 4th, 2025",
       events: [
         { time: "12:00 PM", title: "Check-In" },
         { time: "1:00 PM", title: "Building With Coda" },
@@ -23,7 +23,7 @@ export function Schedule() {
     },
     {
       day: "Saturday",
-      date: "Oct 26",
+      date: "April 5th, 2025",
       events: [
         { time: "12:00 AM", title: "Midnight Snack" },
         { time: "8:00 AM", title: "Breakfast" },
@@ -37,7 +37,7 @@ export function Schedule() {
     },
     {
       day: "Sunday",
-      date: "Oct 27",
+      date: "April 6th, 2025",
       events: [
         { time: "12:00 AM", title: "Midnight Snack" },
         { time: "8:00 AM", title: "Hacking Ends" },
@@ -58,12 +58,9 @@ export function Schedule() {
       className={twMerge(
         "relative w-full overflow-hidden py-16",
         // Purple-to-dark gradient background
-        "bg-gradient-to-b from-violet-950/50 to-[#000000]"
+        "bg-gradient-to-b from-[#1C121E] via-[#200630] to-[#0F0721]"
       )}
     >
-      {/* Optional gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-violet-950/30 via-transparent to-transparent" />
-
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Title */}
         <h2 className="text-center text-3xl sm:text-4xl font-bold mb-10 text-white">

@@ -36,15 +36,13 @@ export function PhotoCarousel() {
       viewport={{ once: true }}
       className={twMerge(
         "relative w-full overflow-hidden py-16",
-        "bg-gradient-to-b from-violet-950/50 to-[#000000]"
+        "bg-gradient-to-b from-[#200630] via-[#09080C] to-[#1C121E]"
       )}
     >
-      {/* Optional gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-violet-950/30 via-transparent to-transparent" />
-      
+
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <h2 className="text-center text-3xl sm:text-4xl font-bold mb-10 text-white">
-          Highlights from Previous Hackathons
+        <h2 className="text-center text-5xl xs:text-4xl font-bold mb-24 text-white">
+          Highlights from previous ImmerseGT
         </h2>
         <div className="w-full h-full">
           <Carousel slides={slideData} />
