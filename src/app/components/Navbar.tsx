@@ -21,7 +21,7 @@ const Navbar = () => {
             className={`
                 fixed top-0 w-full z-50 transition-all duration-300
                 ${scrolled 
-                    ? 'bg-[#200630] backdrop-blur-md shadow-lg' 
+                    ? 'bg-[#200630]/70 backdrop-blur-md shadow-lg' 
                     : 'bg-transparent'
                 }
             `}
@@ -109,7 +109,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-            
+
             {/* Mobile menu */}
             <div
                 className={`
