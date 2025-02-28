@@ -12,89 +12,82 @@ export function Sponsors() {
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
       className={twMerge(
-        "relative w-full overflow-hidden py-16",
+        "relative w-full overflow-hidden py-24", // Increased vertical padding
         // Purple-to-dark gradient background
         "bg-gradient-to-b from-[#1C121E] via-[#200630] to-[#09080C]"
       )}
     >
-      {/* Subtle gradient overlay */}
-
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-8"> {/* More horizontal padding */}
         {/* Main Title */}
-        <h2 className="text-center text-6xl xs:text-3xl font-bold mb-10 text-white">
-          Meet our 2025 sponsors
+        <h2 className="text-center text-4xl sm:text-5xl md:text-6xl font-bold mb-16 p-4 bg-gradient-to-r from-violet-200 via-violet-400 to-violet-200 text-transparent bg-clip-text">
+          Meet our 2025 Sponsors
         </h2>
+
+        {/* <div className="border-2 border-white py-6"> */}
         {/* Unicorn Sponsor */}
-        <div className="mb-12">
-          <h3 className="text-xl font-semibold mb-6 text-center uppercase tracking-wider text-violet-300">
-            Unicorn Sponsor
-          </h3>
-          <div className="grid grid-cols-1 gap-8 place-items-center p-4">
-            {/* Single unicorn sponsor logo */}
-            <div className="hover:scale-105 duration-300 relative backdrop-blur-sm p-8 rounded-lg flex items-center justify-center border border-white shadow-lg overflow-hidden">
-              {/* Glossy overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-violet-900/5 to-transparent pointer-events-none" />
+        <div className="mb-20"> {/* Increased section spacing */}
+          <div className="grid grid-cols-1 gap-10 place-items-center"> {/* Increased grid gap */}
+            {/* Snap AR + Ghost Logo */}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="flex flex-col items-center justify-center p-4 duration-300" /* Added padding */
+            >
               <img
-            src="/SnapAR-2.png"
-            alt="Unicorn Sponsor Logo"
-            className="h-auto w-auto max-h-16 object-contain relative z-10"
+                src="/SnapAR-2.png"
+                alt="Unicorn Sponsor Logo"
+                className="max-h-20 object-contain" /* Larger logo */
               />
               <img
-            src="/Ghost Logo (for light backgrounds).png "
-            alt="Unicorn Sponsor Logo"
-            className="h-auto w-auto max-h-16 object-contain relative z-10"
+                src="/Ghost Logo (for light backgrounds).png"
+                alt="Unicorn Sponsor Logo"
+                className="max-h-20 object-contain mt-6" /* Increased spacing and larger logo */
               />
-            </div>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="flex flex-col items-center justify-center p-4 duration-200" /* Added padding */
+            >
+              <img
+                src="/niantic.png"
+                alt="Unicorn Sponsor Logo"
+                className="max-h-14 object-contain" /* Larger logo */
+              />
+            </motion.div>
+            
           </div>
         </div>
 
         {/* Community Sponsors */}
-        <div className="mb-12">
-          <h3 className="text-xl font-semibold mb-6 text-center uppercase tracking-wider text-violet-300">
+        <div className="mb-20"> {/* Increased section spacing */}
+          <h3 className="text-xl font-semibold mb-10 text-center uppercase tracking-wider text-violet-300">
             Community Sponsors
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 place-items-center p-4"></div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 place-items-center">
-            {/* Two community sponsors */}
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg flex items-center justify-center w-48 h-24 border border-white">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 place-items-center"> {/* Increased grid gap */}
+            <motion.div whileHover={{ scale: 1.05 }} className="p-4 duration-200"> {/* Added padding */}
               <img
-            src="/redbull.png"
-            alt="Community Sponsor 1"
-            className="h-16 w-auto object-contain"
+                src="/red-bull.png"
+                alt="Community Sponsor 1"
+                className="max-h-40 object-contain" /* Larger logo */
               />
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg flex items-center justify-center w-48 h-24 border border-white">
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.05 }} className="p-4 duration-200"> {/* Added padding */}
               <img
-            src="/celcius.png"
-            alt="Community Sponsor 2"
-            className="h-16 w-auto object-contain"
+                src="/celcius.png"
+                alt="Community Sponsor 2"
+                className="max-h-16 object-contain" /* Larger logo */
               />
-            </div>
+            </motion.div>
           </div>
         </div>
 
         {/* Future Sponsors */}
         <div className="mb-12">
-          <h3 className="text-xl font-semibold mb-6 text-center uppercase tracking-wider text-violet-300">
+          <h3 className="text-xl font-semibold mb-10 text-center uppercase tracking-wider text-violet-400">
             More Sponsors Coming Soon
           </h3>
-          {/* <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 place-items-center">
-            
-            <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg flex items-center justify-center text-white font-semibold border">
-              Coming Soon
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg flex items-center justify-center text-white font-semibold border">
-              Coming Soon
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg flex items-center justify-center text-white font-semibold border">
-              Coming Soon
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg flex items-center justify-center text-white font-semibold border">
-              Coming Soon
-            </div>
-          </div> */}
         </div>
       </div>
+      {/* </div> */}
     </motion.section>
   );
 }

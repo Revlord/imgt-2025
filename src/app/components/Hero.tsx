@@ -8,6 +8,15 @@ import { ArrowRight } from "lucide-react";
 export function ShootingStarsAndStarsBackgroundDemo() {
   return (
     <div className="relative h-[55-rem] w-full flex flex-col items-center justify-start bg-[#0F0013] overflow-hidden">
+      <a id="mlh-trust-badge" 
+         className="fixed right-[20px] top-0 z-[10000] hidden md:block w-[5%] min-w-[40px] max-w-[60px] md:max-w-[100px]"
+         href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=black"
+         target="_blank">
+         <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-black.svg" 
+          alt="Major League Hacking 2025 Hackathon Season"
+          className="w-full h-auto" />
+      </a>
+
       {/* Gradient overlay covering the entire section */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#1C121E] via-[#200630] to-[#09080C]" />
 
@@ -58,19 +67,18 @@ export function ShootingStarsAndStarsBackgroundDemo() {
         </div>
 
         {/* Co-hosted by section */}
-        <div className="text-violet-200/80 rounded-md py-8 px-36 mt-10">
-            <p className="font-bold text-xl">Co-Hosted By</p>
-            <div className="mt-4 flex items-center justify-center gap-8">
-
+        <div className="text-violet-200/80 rounded-md py-6 md:py-8 px-4 sm:px-8 md:px-16 lg:px-36 mt-6 md:mt-10 w-full">
+          <p className="font-bold text-lg md:text-xl">Co-Hosted By</p>
+          <div className="mt-3 md:mt-4 flex items-center justify-center gap-4 md:gap-8">
             <img
               src="/gtxr.png"
-              alt="Club 1 Logo"
-              className="h-16 md:h-16 hover:scale-105 duration-300"
+              alt="GTXR Logo"
+              className="h-10 sm:h-12 md:h-16 hover:scale-105 duration-300"
             />
             <img
               src="/sx.png"
-              alt="Club 2 Logo"
-              className="h-10 md:h-10 hover:scale-105 duration-300"
+              alt="Startup Exchange Logo"
+              className="h-6 sm:h-8 md:h-10 hover:scale-105 duration-300"
             />
           </div>
         </div>

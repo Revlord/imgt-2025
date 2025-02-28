@@ -10,13 +10,13 @@ import FAQPage from "./components/FAQ";
 export default function Home() {
   return (
     <div className="min-h-screen flex-col">
-      <a id="home">
+      <div id="home">
         <ShootingStarsAndStarsBackgroundDemo/>
-      </a>
+      </div>
       <a id="sponsors">
         <Sponsors/>
       </a>
-      <a id="judges">
+      <a id="speakers">
         <Judges/>
       </a>
       <a id="photos">
