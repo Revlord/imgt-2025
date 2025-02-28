@@ -8,14 +8,45 @@ import { ArrowRight } from "lucide-react";
 export function ShootingStarsAndStarsBackgroundDemo() {
   return (
     <div className="relative h-[55-rem] w-full flex flex-col items-center justify-start bg-[#0F0013] overflow-hidden">
-      <a id="mlh-trust-badge" 
-         className="fixed right-[20px] top-0 z-[10000] hidden md:block w-[5%] min-w-[40px] max-w-[60px] md:max-w-[100px]"
-         href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=black"
-         target="_blank">
-         <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-black.svg" 
+      {/* MLH Badge - Only shown on laptop-sized screens (1280px-1440px width) */}
+      {typeof window !== 'undefined' && (
+        <React.Fragment>
+          {(() => {
+        const [showBadge, setShowBadge] = React.useState(false);
+        
+        React.useEffect(() => {
+          // Function to check if screen is laptop sized
+          const checkScreenSize = () => {
+            const width = window.innerWidth;
+            // Show badge only on standard laptop screens (approx 1280-1440px)
+            setShowBadge(width >= 1280 && width <= 1440);
+          };
+          
+          // Check on mount
+          checkScreenSize();
+          
+          // Add resize listener
+          window.addEventListener('resize', checkScreenSize);
+          
+          // Cleanup
+          return () => window.removeEventListener('resize', checkScreenSize);
+        }, []);
+        
+        if (!showBadge) return null;
+        
+        return (
+          <a id="mlh-trust-badge" 
+            className="fixed right-[20px] top-0 z-[10000] w-[5%] min-w-[40px] max-w-[60px] md:max-w-[100px]"
+            href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=black"
+            target="_blank">
+            <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-black.svg" 
           alt="Major League Hacking 2025 Hackathon Season"
           className="w-full h-auto" />
-      </a>
+          </a>
+        );
+          })()}
+        </React.Fragment>
+      )}
 
       {/* Gradient overlay covering the entire section */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#1C121E] via-[#200630] to-[#09080C]" />
