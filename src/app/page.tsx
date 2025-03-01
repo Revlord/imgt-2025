@@ -13,21 +13,21 @@ export default function Home() {
       <div id="home">
         <ShootingStarsAndStarsBackgroundDemo/>
       </div>
-      <a id="sponsors">
+      <div id="sponsors">
         <Sponsors/>
-      </a>
-      <a id="speakers">
+      </div>
+      <div id="speakers">
         <Judges/>
-      </a>
-      <a id="photos">
+      </div>
+      <div id="photos">
         <PhotoCarousel/>
-      </a>
-      <a id="schedule">
+      </div>
+      <div id="schedule">
         <Schedule/>
-      </a>
-      <a id="faq">
+      </div>
+      <div id="faq">
         <FAQPage/>
-      </a>
+      </div>
     </div>
   );
 }

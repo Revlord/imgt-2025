@@ -95,7 +95,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
                         decoding="sync"
                     />
                     {current === index && (
-                        <div className="absolute inset-0 bg-black/30 transition-all duration-1000" />
+                        <div className="absolute inset-0 transition-all duration-1000" />
                     )}
                 </div>
 

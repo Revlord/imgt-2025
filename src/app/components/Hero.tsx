@@ -4,6 +4,7 @@ import React from "react";
 import { ShootingStars } from "./ui/shooting-stars";
 import { StarsBackground } from "./ui/stars-background";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export function ShootingStarsAndStarsBackgroundDemo() {
   return (
@@ -101,16 +102,20 @@ export function ShootingStarsAndStarsBackgroundDemo() {
         <div className="text-violet-200/80 rounded-md py-6 md:py-8 px-4 sm:px-8 md:px-16 lg:px-36 mt-6 md:mt-10 w-full">
           <p className="font-bold text-lg md:text-xl">Co-Hosted By</p>
           <div className="mt-3 md:mt-4 flex items-center justify-center gap-4 md:gap-8">
-            <img
-              src="/gtxr.png"
-              alt="GTXR Logo"
-              className="h-10 sm:h-12 md:h-16 hover:scale-105 duration-300"
-            />
-            <img
-              src="/sx.png"
-              alt="Startup Exchange Logo"
-              className="h-6 sm:h-8 md:h-10 hover:scale-105 duration-300"
-            />
+            <Link href={'https://www.gtxr.club/'}>
+              <img
+                src="/gtxr.png"
+                alt="GTXR Logo"
+                className="h-10 sm:h-12 md:h-16 hover:scale-105 duration-300"
+              />
+            </Link>
+            <Link href={'https://www.startup.exchange/'}>
+              <img
+                src="/sx.png"
+                alt="Startup Exchange Logo"
+                className="h-6 sm:h-8 md:h-10 hover:scale-105 duration-300"
+              />
+            </Link>
           </div>
         </div>
 
