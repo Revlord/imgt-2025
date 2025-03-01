@@ -19,7 +19,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
           const checkScreenSize = () => {
             const width = window.innerWidth;
             // Show badge only on standard laptop screens (approx 1280-1440px)
-            setShowBadge(width >= 1280 && width <= 1440);
+            setShowBadge(width >= 1270 && width <= 3000);
           };
           
           // Check on mount
