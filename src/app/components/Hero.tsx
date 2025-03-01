@@ -77,11 +77,11 @@ export function ShootingStarsAndStarsBackgroundDemo() {
             ImmerseGT 2025 - XR hackathon. 36 hours. Endless possibilities
         </p>
         <br></br>
-        <div className="hover:scale-105 duration-300">
+        <Link href={'https://maps.app.goo.gl/5vq8PS9r7BEFuR5v8'} className="hover:scale-105 duration-300">
             <p className="text-white text-lg font-bold md:text-xl tracking-wider">
             April 4th-6th  |  Klaus Atrium  |  Georgia Tech
             </p>
-        </div>
+        </Link>
 
         {/* Buttons */}
         <div className="mt-8 flex flex-col md:flex-row gap-4 items-center">
