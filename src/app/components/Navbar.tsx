@@ -37,7 +37,7 @@ const Navbar = () => {
                 Sponsors
               </Link>
               <Link
-                href="#judges"
+                href="#speakers"
                 className="text-violet-200/80 hover:text-violet-700 transition-colors"
               >
                 Speakers
