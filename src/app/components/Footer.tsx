@@ -95,6 +95,7 @@ const Footer = () => {
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 md:space-x-4 mb-6 md:mb-0">
             <p className="text-sm text-gray-400">Co-Hosted By</p>
             <div className="flex items-center space-x-3 md:space-x-4">
+              <a href='https://www.gtxr.club/'>
               <Image
                 src="/gtxr.png"
                 alt="GTXR"
@@ -102,7 +103,9 @@ const Footer = () => {
                 height={30}
                 className="h-7 md:h-9 w-auto"
               />
+              </a>
               <div className="border-l border-gray-600 h-6 md:h-8"></div>
+              <a href='https://www.startup.exchange/'>
               <Image
                 src="/sx.png"
                 alt="Startup Exchange"
@@ -110,6 +113,7 @@ const Footer = () => {
                 height={30}
                 className="h-5 md:h-6 w-auto"
               />
+              </a>
             </div>
           </div>
           
