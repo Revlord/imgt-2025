@@ -48,7 +48,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link href="#speakers" className="text-sm md:text-base text-gray-400 hover:text-purple-400 transition-colors">
-                  Speakers 
+                  Speakers
                 </Link>
               </li>
               <li>
@@ -69,12 +69,12 @@ const Footer = () => {
             <h3 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Connect</h3>
             <ul className="space-y-2 md:space-y-3">
               <li>
-                <Link href="/contact" className="text-sm md:text-base text-gray-400 hover:text-purple-400 transition-colors">
+                <Link href="https://www.instagram.com/immerse.gt" className="text-sm md:text-base text-gray-400 hover:text-purple-400 transition-colors">
                   Instagram
                 </Link>
               </li>
               <li>
-                <Link href="/apply" className="text-sm md:text-base text-gray-400 hover:text-purple-400 transition-colors">
+                <Link href="https://www.linkedin.com/company/immersegt" className="text-sm md:text-base text-gray-400 hover:text-purple-400 transition-colors">
                   LinkedIn
                 </Link>
               </li>
