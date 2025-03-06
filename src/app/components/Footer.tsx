@@ -86,6 +86,11 @@ const Footer = () => {
                   Become a Sponsor
                 </Link>
               </li>
+              <li>
+                <Link href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md" className="text-sm md:text-base text-gray-400 hover:text-purple-400 transition-colors">
+                  MLH Code of Conduct
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
