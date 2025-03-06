@@ -32,18 +32,16 @@ export function Sponsors() {
                 className="rounded-lg p-6 flex flex-col items-center justify-center w-full max-w-sm"
               >
                 <img
-            src="/SnapAR-2.png"
-            alt="Snap AR Logo"
-            className="max-h-20 object-contain mb-4" // Increased size from 16 to 20
+                  src="/SnapAR-2.png"
+                  alt="Snap AR Logo"
+                  className="max-h-20 object-contain mb-4"
                 />
                 <img
-            src="/Ghost Logo (for light backgrounds).png"
-            alt="Ghost Logo"
-            className="max-h-16 object-contain"
+                  src="/Ghost Logo (for light backgrounds).png"
+                  alt="Ghost Logo"
+                  className="max-h-16 object-contain"
                 />
-            </motion.div>
-            
-
+              </motion.div>
             </Link>
             {/* Niantic Logo Container - Positioned below */}
             <motion.div
@@ -51,9 +49,9 @@ export function Sponsors() {
               className="rounded-lg p-6 flex items-center justify-center w-full max-w-xs"
             >
               <img
-          src="/niantic.png"
-          alt="Niantic Logo"
-          className="max-h-14 object-contain"
+                src="/niantic.png"
+                alt="Niantic Logo"
+                className="max-h-14 object-contain"
               />
             </motion.div>
           </div>
@@ -65,23 +63,12 @@ export function Sponsors() {
             Community Partners
           </h3>
           
-          {/* Centered grid with smaller gaps and better alignment */}
-          <div className="flex flex-wrap justify-center items-center gap-4">
-            {/* Now using flex layout for better control */}
+          {/* Single-line flex container with fixed dimensions for each sponsor */}
+          <div className="flex flex-wrap md:flex-nowrap justify-center items-center">
+            {/* All logos with identical container dimensions */}
             <motion.div 
               whileHover={{ scale: 1.05 }} 
-              className="p-4 mx-2 flex items-center justify-center h-44 w-64"
-            >
-              <img
-              src="/red-bull.png"
-              alt="Red Bull Logo"
-              className="max-h-24 object-contain"
-              />
-            </motion.div>
-            
-            <motion.div 
-              whileHover={{ scale: 1.05 }} 
-              className="p-4 mx-2 flex items-center justify-center h-24 w-64"
+              className="p-4 flex items-center justify-center h-24 w-48"
             >
               <img
                 src="/celcius.png"
@@ -92,7 +79,7 @@ export function Sponsors() {
             
             <motion.div 
               whileHover={{ scale: 1.05 }} 
-              className="p-4 mx-2 flex items-center justify-center h-24 w-64"
+              className="p-4 flex items-center justify-center h-24 w-48"
             >
               <img
                 src="/mlh.png"
@@ -100,9 +87,43 @@ export function Sponsors() {
                 className="max-h-12 object-contain"
               />
             </motion.div>
+
+            {/* Grokit logo - bigger */}
+            <motion.div 
+              whileHover={{ scale: 1.05 }} 
+              className="p-4 flex items-center justify-center h-24 w-48"
+            >
+              <img
+                src="/grokit.png"
+                alt="Grokit Logo"
+                className="max-h-24 object-contain" /* Increased from max-h-12 */
+              />
+            </motion.div>
+            
+            {/* Standout logo - bigger */}
+            <motion.div 
+              whileHover={{ scale: 1.05 }} 
+              className="p-4 flex items-center justify-center h-24 w-48"
+            >
+              <img
+                src="/standout.png"
+                alt="Standout Logo"
+                className="max-h-20 object-contain" /* Increased from max-h-12 */
+              />
+            </motion.div>
+                        {/* Red Bull logo - bigger */}
+                        <motion.div 
+              whileHover={{ scale: 1.05 }} 
+              className="p-4 flex items-center justify-center h-24 w-48"
+            >
+              <img
+                src="/red-bull.png"
+                alt="Red Bull Logo"
+                className="max-h-36 object-contain" /* Increased from max-h-12 */
+              />
+            </motion.div>
           </div>
         </div>
-
         {/* Future Sponsors */}
         <div className="mb-12">
           <h3 className="text-xl font-semibold mb-10 text-center uppercase tracking-wider text-violet-400">
