@@ -3,31 +3,36 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
+import Link from "next/link";
 
 const judgesData = [
     {
-        name: "Mitchell",
+        name: "Mitchell Kuppersmith",
         role: "Mitchell is a Design Engineer at Snap designing and prototyping experiences at the intersection of AI and AR for Spectacles. He graduated from the University of Michigan with a degree in Computer and Cognitive Sciences with a focus on XR while obsessively competing in hackathons and game jams. ",
         label: "SNAP AR",
         image: "/steven.png",
+        website: "https://www.linkedin.com/in/mitchell-kuppersmith",
+    },
+    {
+        name: "Adam T. Kornuth",
+        role: "Adam is a seasoned executive with 15+ years of experience in strategy, product leadership, and behavioral analytics, driving growth and innovation across retail, media, and tech. Proven track record of leading cross-functional teams and delivering results for clients like Coca-Cola, AT&T, Toyota, and IHG",
+        label: "VR AR Association",
+        image: "/adam.png",
+        website: "https://www.linkedin.com/in/adam-t-kornuth",
+    },
+    {
+        name: "JP Minetos",
+        role: "JP Minetos is an investor and VR data analyst at Hartmann Capital, focused on VR. He shares valuable insights on VR store trends and industry developments, with 1k+ followers on Twitter and 4.4k+ on LinkedIn. A huge VR nerd, he's deeply immersed in the future of immersive technologies.",
+        label: "Hartmann Capital",
+        image: "/jp.png",
+        website: "https://www.linkedin.com/in/jpminetos/",
     },
     {
         name: "Coming Soon",
-        role: "SPEAKER",
-        label: "APPLE",
+        role: "Coming Soon",
+        label: "TBD",
         image: "/ImmerseLogo.svg",
-    },
-    {
-        name: "Coming Soon",
-        role: "SPEAKER",
-        label: "META",
-        image: "/ImmerseLogo.svg",
-    },
-    {
-        name: "Coming Soon",
-        role: "SPEAKER",
-        label: "MIT",
-        image: "/ImmerseLogo.svg",
+        website: "",
     },
 ];
 
@@ -50,6 +55,7 @@ export function Judges() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
                     {judgesData.map((judge, index) => (
+                        <Link href={judge.website}>
                         <motion.div
                             key={index}
                             className="relative flex flex-col items-center text-center p-8 py-8 rounded-xl bg-black/10 backdrop-blur-md border border-white/10 shadow-lg transition-transform hover:scale-105"
@@ -74,6 +80,7 @@ export function Judges() {
 
                             <p className="text-gray-300 text-md mt-1">{judge.role}</p>
                         </motion.div>
+                        </Link>
                     ))}
                 </div>
             </div>

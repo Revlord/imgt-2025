@@ -105,6 +105,19 @@ export function Sponsors() {
               </motion.div>
             </Link>
 
+            <Link href="https://www.rebootimagine.com">
+              <motion.div 
+              whileHover={{ scale: 1.05 }} 
+              className="p-4 flex items-center justify-center h-24 w-48"
+              >
+              <img
+                src="/reboot.png"
+                alt="reboot Logo"
+                className="max-h-12 object-contain"
+              />
+              </motion.div>
+            </Link>
+
             {/* Grokit logo - bigger */}
             <Link href="https://3lbgames.com/grokit/">
               <motion.div 
