@@ -6,10 +6,10 @@ import { twMerge } from "tailwind-merge";
 
 const judgesData = [
     {
-        name: "Coming Soon",
-        role: "SPEAKER",
+        name: "Mitchell",
+        role: "Mitchell is a Design Engineer at Snap designing and prototyping experiences at the intersection of AI and AR for Spectacles. He graduated from the University of Michigan with a degree in Computer and Cognitive Sciences with a focus on XR while obsessively competing in hackathons and game jams. ",
         label: "SNAP AR",
-        image: "/ImmerseLogo.svg",
+        image: "/steven.png",
     },
     {
         name: "Coming Soon",

@@ -43,17 +43,30 @@ export function Sponsors() {
                 />
               </motion.div>
             </Link>
-            {/* Niantic Logo Container - Positioned below */}
+            <Link href={"https://nianticlabs.com"}>
             <motion.div
-              whileHover={{ scale: 1.02 }}
+              whileHover={{ scale: 1.05 }}
               className="rounded-lg p-6 flex items-center justify-center w-full max-w-xs"
             >
               <img
                 src="/niantic.png"
                 alt="Niantic Logo"
+                className="max-h-23 object-contain"
+              />
+            </motion.div>
+            </Link>
+            <Link href={"https://www.meshy.ai"}>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="rounded-lg p-6 flex items-center justify-center w-full max-w-xs"
+            >
+              <img
+                src="/meshy.png"
+                alt="Meshy Logo"
                 className="max-h-14 object-contain"
               />
             </motion.div>
+            </Link>
           </div>
         </div>
 
@@ -66,6 +79,7 @@ export function Sponsors() {
           {/* Single-line flex container with fixed dimensions for each sponsor */}
           <div className="flex flex-wrap md:flex-nowrap justify-center items-center">
             {/* All logos with identical container dimensions */}
+            <Link href={"https://www.celsius.com"}>
             <motion.div 
               whileHover={{ scale: 1.05 }} 
               className="p-4 flex items-center justify-center h-24 w-48"
@@ -76,52 +90,62 @@ export function Sponsors() {
                 className="max-h-12 object-contain"
               />
             </motion.div>
+            </Link>
             
-            <motion.div 
+            <Link href="https://mlh.io">
+              <motion.div 
               whileHover={{ scale: 1.05 }} 
               className="p-4 flex items-center justify-center h-24 w-48"
-            >
+              >
               <img
                 src="/mlh.png"
                 alt="MLH Logo"
                 className="max-h-12 object-contain"
               />
-            </motion.div>
+              </motion.div>
+            </Link>
 
             {/* Grokit logo - bigger */}
-            <motion.div 
+            <Link href="https://3lbgames.com/grokit/">
+              <motion.div 
               whileHover={{ scale: 1.05 }} 
               className="p-4 flex items-center justify-center h-24 w-48"
-            >
+              >
               <img
                 src="/grokit.png"
                 alt="Grokit Logo"
                 className="max-h-24 object-contain" /* Increased from max-h-12 */
               />
-            </motion.div>
+              </motion.div>
+            </Link>
             
             {/* Standout logo - bigger */}
-            <motion.div 
+            <Link href="https://www.standoutstickers.com/">
+              <motion.div 
               whileHover={{ scale: 1.05 }} 
               className="p-4 flex items-center justify-center h-24 w-48"
-            >
+              >
               <img
                 src="/standout.png"
                 alt="Standout Logo"
                 className="max-h-20 object-contain" /* Increased from max-h-12 */
               />
-            </motion.div>
-                        {/* Red Bull logo - bigger */}
-                        <motion.div 
+              </motion.div>
+            </Link>
+            
+            {/* Red Bull logo - bigger */}
+            <Link href="https://redbull.com">
+              <motion.div 
               whileHover={{ scale: 1.05 }} 
               className="p-4 flex items-center justify-center h-24 w-48"
-            >
+              >
               <img
                 src="/red-bull.png"
                 alt="Red Bull Logo"
                 className="max-h-36 object-contain" /* Increased from max-h-12 */
               />
-            </motion.div>
+              </motion.div>
+            </Link>
           </div>
         </div>
         {/* Future Sponsors */}
