@@ -22,7 +22,7 @@ const judgesData = [
     },
     {
         name: "JP Minetos",
-        role: "JP Minetos is an investor and VR data analyst at Hartmann Capital, focused on VR. He shares valuable insights on VR store trends and industry developments, with 1k+ followers on Twitter and 4.4k+ on LinkedIn. A huge VR nerd, he's deeply immersed in the future of immersive technologies.",
+        role: "JP Minetos is a visionary investor and data analyst at Hartmann Capital specializing in virtual reality. His cutting-edge analysis of VR market trends has made him a sought-after voice in the industry.",
         label: "Hartmann Capital",
         image: "/jp.png",
         website: "https://www.linkedin.com/in/jpminetos/",
