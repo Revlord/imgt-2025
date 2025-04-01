@@ -63,7 +63,19 @@ export function Sponsors() {
               <img
                 src="/meshy.png"
                 alt="Meshy Logo"
-                className="max-h-14 object-contain"
+                className="max-h-16 object-contain"
+              />
+            </motion.div>
+            </Link>
+            <Link href={"https://create-x.gatech.edu/"}>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="rounded-lg p-6 flex items-center justify-center w-full max-w-xs"
+            >
+              <img
+                src="/createx.png"
+                alt="createX"
+                className="max-h-17 object-contain"
               />
             </motion.div>
             </Link>
@@ -146,19 +158,6 @@ export function Sponsors() {
               </motion.div>
             </Link>
             
-            {/* Red Bull logo - bigger */}
-            <Link href="https://redbull.com">
-              <motion.div 
-              whileHover={{ scale: 1.05 }} 
-              className="p-4 flex items-center justify-center h-24 w-48"
-              >
-              <img
-                src="/red-bull.png"
-                alt="Red Bull Logo"
-                className="max-h-36 object-contain" /* Increased from max-h-12 */
-              />
-              </motion.div>
-            </Link>
           </div>
         </div>
         {/* Future Sponsors */}
