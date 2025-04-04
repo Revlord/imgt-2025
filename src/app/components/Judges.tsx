@@ -15,7 +15,7 @@ const judgesData = [
     },
     {
         name: "Adam T. Kornuth",
-        role: "Adam is a seasoned executive with 15+ years of experience in strategy, product leadership, and behavioral analytics, driving growth and innovation across retail, media, and tech. Proven track record of leading cross-functional teams and delivering results for clients like Coca-Cola, AT&T, Toyota, and IHG",
+        role: "Adam is a technology leader at Booz Allen Hamilton, the advanced technology company driving speed to outcomes for the nation. He’s also Atlanta Chapter President and Global Gen AI Committee Co-Chair for the VR/AR Association",
         label: "VR AR Association",
         image: "/adam.png",
         website: "https://www.linkedin.com/in/adam-t-kornuth",
@@ -28,10 +28,10 @@ const judgesData = [
         website: "https://www.linkedin.com/in/jpminetos/",
     },
     {
-        name: "Coming Soon",
-        role: "Coming Soon",
-        label: "TBD",
-        image: "/ImmerseLogo.svg",
+        name: "Ariel Zhang",
+        role: "Ariel Zhang serves as the head of community at Meshy, where groundbreaking tools that transform text and images into high-quality 3D models are developed.",
+        label: "Meshy AI",
+        image: "/ariel.png",
         website: "",
     },
 ];
