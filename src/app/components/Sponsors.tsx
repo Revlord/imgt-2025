@@ -19,7 +19,7 @@ export function Sponsors() {
       <div className="relative z-10 max-w-7xl mx-auto px-8">
         {/* Main Title */}
         <h2 className="text-center text-4xl sm:text-5xl md:text-6xl font-bold mb-16 p-4 bg-gradient-to-r from-violet-200 via-violet-400 to-violet-200 text-transparent bg-clip-text">
-          Meet our 2025 Sponsors
+          Meet our Past Sponsors from 2025
         </h2>
 
         {/* Primary Sponsors */}
@@ -163,7 +163,7 @@ export function Sponsors() {
         {/* Future Sponsors */}
         <div className="mb-12">
           <h3 className="text-xl font-semibold mb-10 text-center uppercase tracking-wider text-violet-400">
-            More Sponsors Coming Soon
+            More Past Sponsors
           </h3>
         </div>
       </div>

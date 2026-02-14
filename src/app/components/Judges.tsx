@@ -50,7 +50,7 @@ export function Judges() {
         >
             <div className="relative z-10 max-w-5xl mx-auto px-6">
                 <h2 className="text-center text-6xl xs:text-4xl font-bold mb-12 text-white">
-                    Meet our 2025 speakers
+                    Meet our previous speakers
                 </h2>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">

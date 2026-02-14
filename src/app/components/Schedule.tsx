@@ -9,7 +9,7 @@ export function Schedule() {
   const scheduleData = [
     {
       day: "Friday",
-      date: "April 4th, 2025",
+      date: "April 3rd, 2026",
       events: [
         { time: "12:00 - 5:30 PM", title: "Check-In" },
         { time: "1:00 - 2:00 PM", title: "GTXR: Intro to Unity and XR #1" },
@@ -24,7 +24,7 @@ export function Schedule() {
     },
     {
       day: "Saturday",
-      date: "April 5th, 2025",
+      date: "April 4th, 2026",
       events: [
         { time: "12:00 - 12:30 AM", title: "Midnight Snack" },
         { time: "8:00 - 9:00 AM", title: "Breakfast" },
@@ -40,7 +40,7 @@ export function Schedule() {
     },
     {
       day: "Sunday",
-      date: "April 6th, 2025",
+      date: "April 5th, 2026",
       events: [
         { time: "12:00 - 12:30 AM", title: "Midnight Snack" },
         { time: "8:00 AM", title: "Hacking Ends" },
@@ -69,7 +69,7 @@ export function Schedule() {
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Title */}
         <h2 className="text-center text-3xl sm:text-4xl font-bold mb-10 text-white">
-          ImmerseGT 2025 Schedule (Tentative)
+          ImmerseGT 2026 Schedule (Tentative)
         </h2>
 
         {/* Schedule Grid */}

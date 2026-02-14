@@ -4,11 +4,11 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
-  title: "ImmerseGT 2025",
-  description: "Participate in the 2025 XR Hackathon",
+  title: "ImmerseGT 2026",
+  description: "Participate in the 2026 XR Hackathon",
   openGraph: {
-    title: "ImmerseGT 2025",
-    description: "Participate in the 2025 XR Hackathon",
+    title: "ImmerseGT 2026",
+    description: "Participate in the 2026 XR Hackathon",
     type: "website",
   }
 };

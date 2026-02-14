@@ -38,10 +38,10 @@ export function ShootingStarsAndStarsBackgroundDemo() {
         return (
           <a id="mlh-trust-badge" 
             className="fixed right-[20px] top-0 z-[10000] w-[5%] min-w-[40px] max-w-[60px] md:max-w-[100px]"
-            href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=black"
+            href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=black"
             target="_blank">
-            <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-black.svg" 
-          alt="Major League Hacking 2025 Hackathon Season"
+            <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2026/mlh-trust-badge-2026-black.svg" 
+          alt="Major League Hacking 2026 Hackathon Season"
           className="w-full h-auto" />
           </a>
         );
@@ -74,12 +74,12 @@ export function ShootingStarsAndStarsBackgroundDemo() {
 
         {/* Subheading */}
         <p className="mt-3 text-lg md:text-xl text-violet-200/80 max-w-2xl">
-            ImmerseGT 2025 - XR hackathon. 36 hours. Endless possibilities
+          ImmerseGT 2026 - XR hackathon. 36 hours. Endless possibilities
         </p>
         <br></br>
         <Link href={'https://maps.app.goo.gl/5vq8PS9r7BEFuR5v8'} className="hover:scale-105 duration-300">
             <p className="text-white text-lg font-bold md:text-xl tracking-wider">
-            April 4th-6th  |  Klaus Atrium  |  Georgia Tech
+          April 3rd-5th  |  Klaus Atrium  |  Georgia Tech
             </p>
         </Link>
 

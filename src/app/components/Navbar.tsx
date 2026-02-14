@@ -34,7 +34,7 @@ const Navbar = () => {
                 href="#sponsors"
                 className="text-violet-200/80 hover:text-violet-700 transition-colors"
               >
-                Sponsors
+                Past Sponsors
               </Link>
               <Link
                 href="#speakers"
@@ -43,7 +43,7 @@ const Navbar = () => {
                 Speakers
               </Link>
               <Link
-                href="https://immersegt25.notion.site/Tracks-Prizes-1cbed0c37d3d80689e6bfcc20b3d4264"
+                href="https://immersegt26.notion.site/Tracks-Prizes-1cbed0c37d3d80689e6bfcc20b3d4264"
                 className="text-violet-200/80 hover:text-violet-700 transition-colors"
               >
                 Tracks
@@ -113,7 +113,7 @@ const Navbar = () => {
                 className="block px-3 py-2 rounded-md text-base font-medium text-violet-200/80 hover:text-violet-700 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                Sponsors
+                Past Sponsors
               </Link>
               <Link
                 href="#judges"
@@ -123,7 +123,7 @@ const Navbar = () => {
                 Speakers
               </Link>
               <Link
-                href="https://immersegt25.notion.site/Tracks-Prizes-1cbed0c37d3d80689e6bfcc20b3d4264"
+                href="https://immersegt26.notion.site/Tracks-Prizes-1cbed0c37d3d80689e6bfcc20b3d4264"
                 className="block px-3 py-2 rounded-md text-base font-medium text-violet-200/80 hover:text-violet-700 transition-colors"
               >
                 Tracks

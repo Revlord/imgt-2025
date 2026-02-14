@@ -25,10 +25,10 @@ const Footer = () => {
               </motion.div>
             </Link>
             <p className="text-sm md:text-base text-gray-400 mb-3 md:mb-4">
-              ImmerseGT 2025 - XR hackathon. 36 hours. Endless possibilities
+              ImmerseGT 2026 - XR hackathon. 36 hours. Endless possibilities
             </p>
             <p className="text-sm md:text-base text-gray-400">
-              April 4th-6th | Klaus Atrium | Georgia Tech
+              April 3rd-5th | Klaus Atrium | Georgia Tech
             </p>
           </div>
 
@@ -43,7 +43,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link href="#sponsors" className="text-sm md:text-base text-gray-400 hover:text-purple-400 transition-colors">
-                  Sponsors
+                  Past Sponsors
                 </Link>
               </li>
               <li>
@@ -124,7 +124,7 @@ const Footer = () => {
           
           <div className="text-center md:text-right">
             <p className="text-xs sm:text-sm text-gray-400">
-              &copy; 2025 ImmerseGT. All rights reserved
+              &copy; 2026 ImmerseGT. All rights reserved
             </p>
             <p className="text-xs sm:text-sm text-gray-400 mt-1">
               Designed and Developed by <span className='hover:cursor-pointer hover:text-purple-400 transition-colors' onClick={() => (window.location.href = "https://revlord.vercel.app")}>Revanth Reddy Burramukku</span>
