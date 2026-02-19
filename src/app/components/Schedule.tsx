@@ -5,54 +5,6 @@ import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 
 export function Schedule() {
-  // Replace this with your actual schedule data
-  const scheduleData = [
-    {
-      day: "Friday",
-      date: "April 3rd, 2026",
-      events: [
-        { time: "12:00 - 5:30 PM", title: "Check-In" },
-        { time: "1:00 - 2:00 PM", title: "GTXR: Intro to Unity and XR #1" },
-        { time: "2:00 - 3:00 PM", title: "Snap AR Workshop" },
-        { time: "5:30 PM", title: "Check-in Ends" },
-        { time: "5:30 - 6:30 PM", title: "Opening Ceremony" },
-        { time: "6:30 - 8:00 PM", title: "Team Formation" },
-        { time: "7:30 - 8:30 PM", title: "Dinner" },
-        { time: "8:00 PM", title: "Hacking Begins" },
-        { time: "9:00 - 10:00 PM", title: "Niantic Workshop" },
-      ],
-    },
-    {
-      day: "Saturday",
-      date: "April 4th, 2026",
-      events: [
-        { time: "12:00 - 12:30 AM", title: "Midnight Snack" },
-        { time: "8:00 - 9:00 AM", title: "Breakfast" },
-        { time: "10:00 - 11:00 AM", title: "Office Hours + Mentor Time" },
-        { time: "12:30 - 1:30 PM", title: "Lunch" },
-        { time: "2:00 PM - 3:00 PM", title: "Grokit Workshop" },
-        { time: "3:00 - 4:00 PM", title: "Keynote: JP Minetos" },
-        { time: "4:00 - 5:00 PM", title: "Meshy Workshop" },
-        { time: "7:30 - 8:30 PM", title: "Dinner" },
-        { time: "9:30 - 10:30 PM", title: "Get your T-Shirt!" },
-        { time: "10:30 - 11:45 PM", title: "Mini-games" },
-      ],
-    },
-    {
-      day: "Sunday",
-      date: "April 5th, 2026",
-      events: [
-        { time: "12:00 - 12:30 AM", title: "Midnight Snack" },
-        { time: "8:00 AM", title: "Hacking Ends" },
-        { time: "8:00 - 9:00 AM", title: "Breakfast" },
-        { time: "8:30 AM", title: "Tables Assigned" },
-        { time: "10:30 AM - 1 PM", title: "Project Expo + Judging" },
-        { time: "1:00 - 2:00 PM", title: "Lunch" },
-        { time: "3:00 - 4:00 PM", title: "Closing Ceremony" },
-      ],
-    },
-  ];
-
   return (
     <motion.section
       // Simple fade-in + slide-up animation
@@ -72,41 +24,50 @@ export function Schedule() {
           ImmerseGT 2026 Schedule (Tentative)
         </h2>
 
-        {/* Schedule Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {scheduleData.map((daySchedule, idx) => (
-            <motion.div
-              key={idx}
-              // Hover effect (optional)
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-              className="bg-white/10 backdrop-blur-sm rounded-lg p-6 shadow-lg"
-            >
-              {/* Day + Date */}
-              <div className="mb-4">
-                <h3 className="text-2xl font-semibold text-white">
-                  {daySchedule.day}
-                </h3>
-                <p className="text-sm text-violet-200">
-                  {daySchedule.date}
-                </p>
-              </div>
+        {/* Combined Schedule Cards */}
+        <div className="max-w-5xl mx-auto space-y-6">
+          <motion.div
+            whileHover={{ scale: 1.01 }}
+            transition={{ duration: 0.3 }}
+            className="bg-white/10 backdrop-blur-sm rounded-lg p-16 shadow-lg min-h-[280px] flex items-center justify-center"
+          >
+            <h3 className="text-4xl sm:text-5xl font-semibold text-violet-200 text-center">
+              Coming Soon
+            </h3>
+          </motion.div>
 
-              {/* Events List */}
-              <ul className="space-y-3">
-                {daySchedule.events.map((event, i) => (
-                  <li key={i} className="flex flex-col">
-                    <span className="text-sm text-gray-300">
-                      {event.time}
-                    </span>
-                    <span className="text-white font-medium">
-                      {event.title}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
+          <motion.div
+            whileHover={{ scale: 1.01 }}
+            transition={{ duration: 0.3 }}
+            className="bg-white/10 backdrop-blur-sm rounded-lg p-6 sm:p-8 shadow-lg"
+          >
+            <h3 className="text-2xl sm:text-3xl font-semibold text-violet-200 text-center">
+              Location
+            </h3>
+            <p className="mt-3 mb-5 text-base sm:text-lg text-gray-200 text-center">
+              755 Ferst Dr NW, Atlanta, GA 30332
+            </p>
+            <div className="w-full h-[320px] sm:h-[380px] overflow-hidden rounded-md border border-violet-300/20">
+              <iframe
+                title="ADC XR Makerspace Map"
+                src="https://www.google.com/maps?q=755+Ferst+Dr+NW,+Atlanta,+GA+30332&output=embed"
+                className="w-full h-full"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+            </div>
+            <div className="mt-4 text-center">
+              <a
+                href="https://maps.app.goo.gl/jr95Q4q2BvZYafWG9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex px-5 py-2 rounded-full bg-violet-600 text-white font-medium hover:bg-violet-700 transition-colors duration-300"
+              >
+                Open in Google Maps
+              </a>
+            </div>
+          </motion.div>
         </div>
       </div>
     </motion.section>

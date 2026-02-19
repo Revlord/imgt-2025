@@ -79,7 +79,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
         <br></br>
         <Link href={'https://maps.app.goo.gl/5vq8PS9r7BEFuR5v8'} className="hover:scale-105 duration-300">
             <p className="text-white text-lg font-bold md:text-xl tracking-wider">
-          April 3rd-5th  |  Klaus Atrium  |  Georgia Tech
+          April 10th-12th  |  ADC XR Makerspace  |  Georgia Tech
             </p>
         </Link>
 

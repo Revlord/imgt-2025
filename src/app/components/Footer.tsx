@@ -28,7 +28,7 @@ const Footer = () => {
               ImmerseGT 2026 - XR hackathon. 36 hours. Endless possibilities
             </p>
             <p className="text-sm md:text-base text-gray-400">
-              April 3rd-5th | Klaus Atrium | Georgia Tech
+              April 10th-12th | ADC XR Makerspace | Georgia Tech
             </p>
           </div>
 

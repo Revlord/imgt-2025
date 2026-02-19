@@ -15,7 +15,7 @@ const FAQPage = () => {
     { question: "What is ImmerseGT?", answer: "ImmerseGT is a 36 hour long hackathon at Georgia Tech focusing mainly on working and developing XR (Extended Reality) applications and hardware." },
     { question: "Who is eligible to participate in ImmerseGT?", answer: "Any college student over the age of 18 is eligible to participate and demo their application to this hackathon" },
     { question: "What are the competition categories at ImmerseGT?", answer: "Overall Best Winner, Intelligent Immersion, Gaming Health and Fitness, Lifestyle, Best use of Snap spectacles from Snap AR, Niantic Sponsor prize, Meshy GenAI 3D Excellence Award" },
-    { question: "Where will ImmerseGT take place?", answer: "Klaus Advanced Research Building @ 12pm on April 3rd, 2026." },
+    { question: "Where will ImmerseGT take place?", answer: "ADC XR Makerspace @ 12pm on April 10th, 2026." },
     { question: "How do I participate in ImmerseGT?", answer: "Finish your application on Luma by clicking 'Apply Now'. Acceptances will be decided on a rolling basis. We only have limited seats so apply fast!" },
     { question: "What resources will be provided during ImmerseGT?", answer: "You will have access to industry-leading mentors and software devs in the XR space. Moreover we will hold sponsor workshops throughout the event for you to engage in learning. Moreover, the best part, we will be providing a XR Headset through a need-only basis for a full team (5 people)" },
     { question: "How will judging and prizes work at ImmerseGT?", answer: "We will have industry leading individuals as well as senior developers in the XR industry judging the event! Prizes will be handed directly to the winners during the closing ceremony." },
