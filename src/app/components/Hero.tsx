@@ -87,7 +87,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
         <div className="mt-8 flex flex-col md:flex-row gap-4 items-center">
           <button
             className="px-8 py-3 rounded-full bg-violet-600 text-white font-medium hover:bg-violet-800 transition-colors duration-300 flex items-center gap-2"
-            onClick={() => (window.location.href = "https://lu.ma/fscb1e9s?tk=rLagDy")}
+            onClick={() => (window.location.href = "https://luma.com/2a9atblo")}
           >
             Apply Now <ArrowRight className="inline-block" />
           </button>

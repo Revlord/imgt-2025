@@ -68,7 +68,7 @@ const Navbar = () => {
               </Link>
               <button
                 className="px-6 py-2 rounded-full bg-gradient-to-r from-violet-600 to-violet-800 text-white font-medium hover:from-violet-700 hover:to-violet-900 transition-colors duration-300"
-                onClick={() => (window.location.href = "https://lu.ma/fscb1e9s?tk=rLagDy")}
+                onClick={() => (window.location.href = "https://luma.com/2a9atblo")}
               >
                 Apply Now
               </button>
@@ -153,7 +153,7 @@ const Navbar = () => {
                 className="w-full text-left px-3 py-2 rounded-md text-base font-medium bg-gradient-to-r from-violet-600 to-violet-800 text-white hover:from-violet-700 hover:to-violet-900 transition-colors"
                 onClick={() => {
                   setIsOpen(false);
-                  window.location.href = "https://lu.ma/fscb1e9s?tk=rLagDy";
+                  window.location.href = "https://luma.com/2a9atblo";
                 }}
               >
                 Apply Now
