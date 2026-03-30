@@ -1,156 +1,100 @@
-"use client"
-import { useState } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+"use client";
+import { useState } from "react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+
+const navLinks = [
+  { label: "Sponsors", href: "#sponsors" },
+  { label: "Speakers", href: "#speakers" },
+  { label: "Tracks", href: "https://immersegt26.notion.site/tracks-prizes-2026", external: true },
+  { label: "Schedule", href: "#schedule" },
+  { label: "Photos", href: "#photos" },
+  { label: "FAQs", href: "#faq" },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Animation variants for the mobile menu
-  const mobileMenuVariants = {
-    hidden: { opacity: 0, height: 0 },
-    visible: { opacity: 1, height: 'auto' },
-  };
-
   return (
-    <nav className="fixed top-0 w-full z-50 bg-[#200630]/70 backdrop-blur-md shadow-lg transition-all duration-300">
+    <nav className="fixed top-0 w-full z-50 bg-[var(--bg-deep)]/80 backdrop-blur-xl border-b border-violet-500/[0.06] transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center">
-              <img 
-                src="/ImmerseGTlogo.svg"
-                alt="Logo" 
-                className="h-24 w-auto"
-              />
-            </Link>
-          </div>
+          <Link href="/" className="flex-shrink-0 flex items-center">
+            <img
+              src="/ImmerseGTlogo.svg"
+              alt="ImmerseGT"
+              className="h-20 w-auto"
+            />
+          </Link>
 
-          {/* Desktop Navigation Links */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-center space-x-8">
+          {/* Desktop links */}
+          <div className="hidden md:flex items-center space-x-7">
+            {navLinks.map((link) => (
               <Link
-                href="#sponsors"
-                className="text-violet-200/80 hover:text-violet-700 transition-colors"
+                key={link.label}
+                href={link.href}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
+                className="font-mono text-xs tracking-wider uppercase text-[var(--text-muted)] hover:text-violet-300 transition-colors duration-200"
               >
-                Sponsors
+                {link.label}
               </Link>
-              <Link
-                href="#speakers"
-                className="text-violet-200/80 hover:text-violet-700 transition-colors"
-              >
-                Speakers
-              </Link>
-              <Link
-                href="https://immersegt26.notion.site/tracks-prizes-2026"
-                className="text-violet-200/80 hover:text-violet-700 transition-colors"
-              >
-                Tracks
-              </Link>
-              <Link 
-                href="#schedule"
-                className="text-violet-200/80 hover:text-violet-700 transition-colors"
-              >
-                Schedule
-              </Link>
-              <Link
-                href="#photos"
-                className="text-violet-200/80 hover:text-violet-700 transition-colors"
-              >
-                Photos
-              </Link>
-              <Link
-                href="#faq"
-                className="text-violet-200/80 hover:text-violet-700 transition-colors"
-              >
-                FAQs
-              </Link>
-              <button
-                className="px-6 py-2 rounded-full bg-gradient-to-r from-violet-600 to-violet-800 text-white font-medium hover:from-violet-700 hover:to-violet-900 transition-colors duration-300"
-                onClick={() => (window.location.href = "https://luma.com/2a9atblo")}
-              >
-                Apply Now
-              </button>
-            </div>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button 
-              onClick={() => setIsOpen(!isOpen)} 
-              className="text-violet-200/80 hover:text-violet-700 focus:outline-none focus:text-violet-700"
+            ))}
+            <button
+              className="ml-2 px-5 py-2 rounded-full bg-violet-600 text-white text-xs font-semibold uppercase tracking-wider hover:bg-violet-700 transition-colors duration-300 glow-purple-sm"
+              onClick={() =>
+                (window.location.href = "https://luma.com/2a9atblo")
+              }
             >
-              {isOpen ? (
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              )}
+              Apply Now
             </button>
           </div>
+
+          {/* Mobile toggle */}
+          <button
+            className="md:hidden text-[var(--text-muted)] hover:text-violet-300 focus:outline-none"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? (
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
         </div>
       </div>
 
-      {/* Mobile Navigation Menu */}
+      {/* Mobile menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
             key="mobile-menu"
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            variants={mobileMenuVariants}
-            transition={{ duration: 0.3 }}
-            className="md:hidden bg-[#200630]/90 backdrop-blur-md"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.25 }}
+            className="md:hidden bg-[var(--bg-deep)]/95 backdrop-blur-xl border-t border-violet-500/[0.06]"
           >
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              <Link
-                href="#sponsors"
-                className="block px-3 py-2 rounded-md text-base font-medium text-violet-200/80 hover:text-violet-700 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Sponsors
-              </Link>
-              <Link
-                href="#judges"
-                className="block px-3 py-2 rounded-md text-base font-medium text-violet-200/80 hover:text-violet-700 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Speakers
-              </Link>
-              <Link
-                href="https://immersegt26.notion.site/tracks-prizes-2026"
-                className="block px-3 py-2 rounded-md text-base font-medium text-violet-200/80 hover:text-violet-700 transition-colors"
-              >
-                Tracks
-              </Link>
-              <Link 
-                href="#schedule"
-                className="block px-3 py-2 rounded-md text-base font-medium text-violet-200/80 hover:text-violet-700 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Schedule
-              </Link>
-              <Link
-                href="#photos"
-                className="block px-3 py-2 rounded-md text-base font-medium text-violet-200/80 hover:text-violet-700 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Photos
-              </Link>
-              <Link
-                href="#faq"
-                className="block px-3 py-2 rounded-md text-base font-medium text-violet-200/80 hover:text-violet-700 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                FAQs
-              </Link>
+            <div className="px-4 pt-3 pb-4 space-y-1">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  target={link.external ? "_blank" : undefined}
+                  rel={link.external ? "noopener noreferrer" : undefined}
+                  className="block px-3 py-2.5 rounded-md font-mono text-xs tracking-wider uppercase text-[var(--text-muted)] hover:text-violet-300 transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
               <button
-                className="w-full text-left px-3 py-2 rounded-md text-base font-medium bg-gradient-to-r from-violet-600 to-violet-800 text-white hover:from-violet-700 hover:to-violet-900 transition-colors"
+                className="w-full mt-2 px-3 py-2.5 rounded-md text-xs font-semibold uppercase tracking-wider bg-violet-600 text-white hover:bg-violet-700 transition-colors"
                 onClick={() => {
                   setIsOpen(false);
                   window.location.href = "https://luma.com/2a9atblo";

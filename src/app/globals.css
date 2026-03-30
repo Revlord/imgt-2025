@@ -2,23 +2,153 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import Poppins font from Google */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=JetBrains+Mono:wght@300..700&display=swap');
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --bg-deep: #050208;
+  --bg-dark: #0a0712;
+  --bg-surface: #110d1d;
+  --bg-card: #13101c;
+  --accent: #8B5CF6;
+  --accent-light: #C4B5FD;
+  --accent-dim: rgba(139, 92, 246, 0.12);
+  --text-primary: #ede8f5;
+  --text-body: #b8b0c8;
+  --text-muted: #6b6280;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: "Plus Jakarta Sans", serif;
+  color: var(--text-primary);
+  background: var(--bg-deep);
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* ── Selective grain — apply to individual elements ─── */
+@keyframes grain {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-5%, -10%); }
+  20% { transform: translate(-15%, 5%); }
+  30% { transform: translate(7%, -25%); }
+  40% { transform: translate(-5%, 25%); }
+  50% { transform: translate(-15%, 10%); }
+  60% { transform: translate(15%, 0%); }
+  70% { transform: translate(0%, 15%); }
+  80% { transform: translate(3%, 35%); }
+  90% { transform: translate(-10%, 10%); }
+}
+
+.grain {
+  position: relative;
+  overflow: hidden;
+}
+
+.grain::after {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain 6s steps(8) infinite;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ── Very subtle global scanlines ──────────────────── */
+.scanlines-global {
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0px,
+    transparent 3px,
+    rgba(0, 0, 0, 0.012) 3px,
+    rgba(0, 0, 0, 0.012) 4px
+  );
+  pointer-events: none;
+  z-index: 9998;
+}
+
+/* ── Utility classes ────────────────────────────────── */
+.font-display {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.font-mono-accent {
+  font-family: "JetBrains Mono", monospace;
+}
+
+.glow-purple {
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.2), 0 0 60px rgba(139, 92, 246, 0.06);
+}
+
+.glow-purple-sm {
+  box-shadow: 0 0 16px rgba(139, 92, 246, 0.15);
+}
+
+/* ── Vignette mask for images ──────────────────────── */
+.vignette {
+  mask-image: radial-gradient(ellipse at center, black 20%, transparent 72%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 20%, transparent 72%);
+}
+
+.vignette-wide {
+  mask-image: radial-gradient(ellipse 80% 60% at center, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at center, black 30%, transparent 80%);
+}
+
+.vignette-bottom {
+  mask-image: linear-gradient(to bottom, black 0%, black 40%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 40%, transparent 100%);
+}
+
+/* ── Concentric circles spin ───────────────────────── */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 120s linear infinite;
+}
+
+/* ── Float animation ───────────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ── Greek key / meander border pattern ────────────── */
+.greek-border-top {
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      rgba(139, 92, 246, 0.12) 0px,
+      rgba(139, 92, 246, 0.12) 8px,
+      transparent 8px,
+      transparent 16px
+    );
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+/* ── Scrollbar styling ─────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.5);
 }
