@@ -213,7 +213,7 @@ export function Schedule() {
             {/* Decorative bg image */}
             <div className="absolute inset-0 opacity-[0.04] pointer-events-none">
               <img
-                src="/imgt26-branding-kit-2/Frame 514.png"
+                src="/imgt26-branding-kit-2/monalisaAVP.png"
                 alt=""
                 className="w-full h-full object-cover"
                 aria-hidden="true"

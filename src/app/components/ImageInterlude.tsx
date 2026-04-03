@@ -54,8 +54,8 @@ export function ImageInterlude({
 export function DavidInterlude() {
   return (
     <ImageInterlude
-      src="/imgt26-branding-kit-2/Frame 514.png"
-      alt="Statue of David wearing VR headset"
+      src="/imgt26-branding-kit-2/monalisaAVP.png"
+      alt="Mona Lisa wearing VR headset"
       height="h-[35vh] md:h-[45vh]"
       overlay="dark"
     />
