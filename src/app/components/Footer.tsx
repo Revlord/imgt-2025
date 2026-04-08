@@ -13,7 +13,7 @@ const Footer = () => {
             <Link href="/" className="inline-block mb-5">
               <motion.div whileHover={{ rotate: 360 }} transition={{ duration: 1.2 }}>
                 <Image
-                  src="/brand_kit/ImmerseGT Logo - White.png"
+                  src="/brand_kit/ImmerseGT Logo - White.webp"
                   alt="ImmerseGT"
                   width={200}
                   height={60}

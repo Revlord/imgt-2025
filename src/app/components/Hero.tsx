@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 function MLHBadge() {
@@ -78,12 +79,15 @@ export function ShootingStarsAndStarsBackgroundDemo() {
     <div className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-[var(--bg-deep)]">
       <MLHBadge />
 
-      {/* ── Full-bleed Creation of Adam background ── */}
+      {/* ── Full-bleed background ── */}
       <div className="absolute inset-0 vignette-wide">
-        <img
-          src="/brand_kit/ImmerseGT Hands.png"
+        <Image
+          src="/brand_kit/ImmerseGT Hands.webp"
           alt=""
-          className="w-full h-full object-cover opacity-30"
+          fill
+          priority
+          className="object-cover opacity-30"
+          sizes="100vw"
           aria-hidden="true"
         />
       </div>
@@ -113,10 +117,13 @@ export function ShootingStarsAndStarsBackgroundDemo() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10 flex flex-col items-center text-center px-4 py-12"
       >
-        <img
-          src="/brand_kit/ImmerseGT Logo - White.png"
+        <Image
+          src="/brand_kit/ImmerseGT Logo - White.webp"
           alt="ImmerseGT Logo"
-          className="h-16 md:h-24 mb-6 object-contain"
+          width={800}
+          height={202}
+          priority
+          className="h-16 md:h-24 w-auto mb-6 object-contain"
         />
 
         <h1 className="font-display text-4xl md:text-7xl md:leading-tight max-w-5xl font-bold tracking-tight">

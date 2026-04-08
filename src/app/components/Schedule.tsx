@@ -225,9 +225,10 @@ export function Schedule() {
             {/* Decorative bg image */}
             <div className="absolute inset-0 opacity-[0.04] pointer-events-none">
               <img
-                src="/brand_kit/ImmerseGT Circles.png"
+                src="/brand_kit/ImmerseGT Circles.webp"
                 alt=""
                 className="w-full h-full object-cover"
+                loading="lazy"
                 aria-hidden="true"
               />
             </div>

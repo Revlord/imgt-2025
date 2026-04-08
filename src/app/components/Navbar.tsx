@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
@@ -21,9 +22,12 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 flex items-center">
-            <img
-              src="/brand_kit/ImmerseGT Logo - White.png"
+            <Image
+              src="/brand_kit/ImmerseGT Logo - White.webp"
               alt="ImmerseGT"
+              width={200}
+              height={50}
+              priority
               className="h-8 w-auto object-contain"
             />
           </Link>

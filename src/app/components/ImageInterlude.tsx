@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 interface ImageInterludeProps {
@@ -23,10 +24,13 @@ export function ImageInterlude({
       viewport={{ once: true }}
       className={`relative w-full ${height} overflow-hidden grain`}
     >
-      <img
+      <Image
         src={src}
         alt={alt}
-        className="w-full h-full object-cover"
+        fill
+        className="object-cover"
+        sizes="100vw"
+        loading="lazy"
         aria-hidden={!alt}
       />
 
@@ -52,7 +56,7 @@ export function ImageInterlude({
 export function EyesInterlude() {
   return (
     <ImageInterlude
-      src="/brand_kit/ImmerseGT Eyes.png"
+      src="/brand_kit/ImmerseGT Eyes.webp"
       alt="VR headset eyes closeup"
       height="h-[30vh] md:h-[40vh]"
       overlay="dark"
@@ -63,7 +67,7 @@ export function EyesInterlude() {
 export function CirclesInterlude() {
   return (
     <ImageInterlude
-      src="/brand_kit/ImmerseGT Circles.png"
+      src="/brand_kit/ImmerseGT Circles.webp"
       alt="ImmerseGT concentric circles"
       height="h-[30vh] md:h-[40vh]"
       overlay="purple"
