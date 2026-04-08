@@ -23,7 +23,6 @@ export function ImageInterlude({
       viewport={{ once: true }}
       className={`relative w-full ${height} overflow-hidden grain`}
     >
-      {/* Image with vignette */}
       <img
         src={src}
         alt={alt}
@@ -40,7 +39,6 @@ export function ImageInterlude({
       {/* Side fades */}
       <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg-deep)] via-transparent to-[var(--bg-deep)] opacity-60" />
 
-      {/* Color overlay */}
       {overlay === "dark" && (
         <div className="absolute inset-0 bg-[var(--bg-deep)]/30" />
       )}
@@ -51,33 +49,22 @@ export function ImageInterlude({
   );
 }
 
-export function DavidInterlude() {
+export function EyesInterlude() {
   return (
     <ImageInterlude
-      src="/imgt26-branding-kit-2/monalisaAVP.png"
-      alt="Mona Lisa wearing VR headset"
-      height="h-[35vh] md:h-[45vh]"
+      src="/brand_kit/ImmerseGT Eyes.png"
+      alt="VR headset eyes closeup"
+      height="h-[30vh] md:h-[40vh]"
       overlay="dark"
     />
   );
 }
 
-export function MonaLisaInterlude() {
+export function CirclesInterlude() {
   return (
     <ImageInterlude
-      src="/imgt26-branding-kit-2/Frame 486.png"
-      alt="Mona Lisa wearing VR headset"
-      height="h-[50vh] md:h-[60vh]"
-      overlay="dark"
-    />
-  );
-}
-
-export function SistineInterlude() {
-  return (
-    <ImageInterlude
-      src="/imgt26-branding-kit-2/Frame 495.png"
-      alt="Creation of Adam with IMMERSE GT branding"
+      src="/brand_kit/ImmerseGT Circles.png"
+      alt="ImmerseGT concentric circles"
       height="h-[30vh] md:h-[40vh]"
       overlay="purple"
     />

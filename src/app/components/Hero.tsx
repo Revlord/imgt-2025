@@ -81,7 +81,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
       {/* ── Full-bleed Creation of Adam background ── */}
       <div className="absolute inset-0 vignette-wide">
         <img
-          src="/imgt26-branding-kit-2/BDFM_2026_02_19_17_54 1.png"
+          src="/brand_kit/ImmerseGT Hands.png"
           alt=""
           className="w-full h-full object-cover opacity-30"
           aria-hidden="true"
@@ -114,9 +114,9 @@ export function ShootingStarsAndStarsBackgroundDemo() {
         className="relative z-10 flex flex-col items-center text-center px-4 py-12"
       >
         <img
-          src="/ImmerseGTlogo.svg"
+          src="/brand_kit/ImmerseGT Logo - White.png"
           alt="ImmerseGT Logo"
-          className="h-28 md:h-40 mb-4"
+          className="h-16 md:h-24 mb-6 object-contain"
         />
 
         <h1 className="font-display text-4xl md:text-7xl md:leading-tight max-w-5xl font-bold tracking-tight">

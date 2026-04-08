@@ -21,6 +21,8 @@ type DaySchedule = {
   events: ScheduleEvent[];
 };
 
+const latestScheduleUrl = "https://immersegt26.notion.site/schedule";
+
 const schedule: DaySchedule[] = [
   {
     day: "Friday",
@@ -30,14 +32,15 @@ const schedule: DaySchedule[] = [
     activeBg: "bg-violet-600/20 border-violet-500/50",
     cardBorder: "border-violet-500/10",
     events: [
-      { title: "Initial Check-In", time: "12pm – 4pm", location: "Klaus Atrium" },
-      { title: "Workshop #1", time: "1pm – 2pm", location: "Klaus 1116 Seminar Room" },
-      { title: "Workshop #2", time: "2pm – 3pm", location: "Klaus 1116 Seminar Room" },
-      { title: "Dinner", time: "5:00pm – 6:30pm", location: "Klaus Atrium" },
-      { title: "Opening Ceremony", time: "6:30pm – 8:30pm", location: "Klaus Atrium" },
-      { title: "Glowstick Social + Team Formation", time: "8:30pm – 10pm", location: "Klaus Atrium" },
-      { title: "HACKING BEGINS", time: "10pm", highlight: true },
-      { title: "Midnight Snack", time: "12am – 12:30am", location: "ISyE Atrium 2nd Floor" },
+      { title: "Initial Check-In", time: "12pm – 4pm", location: "ISyE Main Atrium 2nd Floor" },
+      { title: "Intro to XR Workshop - Led by PIXL", time: "1pm – 2pm", location: "ISyE Main 228" },
+      { title: "PICO Workshop", time: "2pm – 3pm", location: "ISyE Main 228" },
+      { title: "Spectacles Workshop", time: "3pm – 4pm", location: "ISyE Main 228" },
+      { title: "Dinner", time: "5:00pm – 6:30pm", location: "ISyE Main Atrium 2nd Floor" },
+      { title: "Opening Ceremony", time: "6:30pm – 8:30pm", location: "Instructional Center 103" },
+      { title: "Glowstick Social + Team Formation", time: "8:30pm – 10pm", location: "ISyE Courtyard" },
+      { title: "HACKING BEGINS", time: "9pm", highlight: true },
+      { title: "Midnight Snack", time: "12am – 12:30am", location: "ISyE Main Atrium 2nd Floor" },
     ],
   },
   {
@@ -48,12 +51,12 @@ const schedule: DaySchedule[] = [
     activeBg: "bg-emerald-600/20 border-emerald-500/50",
     cardBorder: "border-emerald-500/10",
     events: [
-      { title: "Breakfast", time: "8am – 9am", location: "Klaus Atrium" },
-      { title: "Office Hours", time: "9:00am – 10:00am", location: "Klaus Atrium" },
-      { title: "Lunch", time: "12:30pm – 1:30pm", location: "Klaus Atrium" },
-      { title: "Workshop #3", time: "3pm – 4pm", location: "Klaus 1116 Seminar Room" },
-      { title: "Dinner", time: "7:30pm – 8:30pm", location: "Klaus Atrium" },
-      { title: "Get your T-Shirt!", time: "9:30pm – 10:30pm", location: "Klaus Atrium" },
+      { title: "Breakfast", time: "8am – 9am", location: "ISyE Main Atrium 2nd Floor" },
+      { title: "Lunch", time: "12:30pm – 1:30pm", location: "ISyE Main Atrium 2nd Floor" },
+      { title: "Workshop #4", time: "3pm – 4pm", location: "ISyE Main 228" },
+      { title: "Dinner", time: "7:30pm – 8:30pm", location: "ISyE Main Atrium 2nd Floor" },
+      { title: "Get your T-Shirt!", time: "9:30pm – 10:30pm", location: "ISyE Main Atrium 2nd Floor" },
+      { title: "Midnight Snack", time: "12am – 12:30am", location: "ISyE Main Atrium 2nd Floor" },
     ],
   },
   {
@@ -64,12 +67,11 @@ const schedule: DaySchedule[] = [
     activeBg: "bg-rose-600/20 border-rose-500/50",
     cardBorder: "border-rose-500/10",
     events: [
-      { title: "Midnight Snack", time: "12am – 12:30am", location: "Klaus Atrium" },
       { title: "Hacking Ends", time: "8am", highlight: true },
-      { title: "Breakfast", time: "8am – 9am", location: "Klaus Atrium" },
-      { title: "Judging Expo", time: "11am – 1pm", location: "Klaus Atrium" },
-      { title: "Lunch (On your own)", time: "1pm – 2pm", location: "Klaus Atrium" },
-      { title: "Closing Ceremony", time: "3pm – 4pm", location: "Klaus Atrium" },
+      { title: "Breakfast", time: "8am – 9am", location: "ISyE Main Atrium 2nd Floor" },
+      { title: "Judging Expo", time: "11am – 1pm", location: "ISyE Main Atrium 2nd Floor" },
+      { title: "Lunch (On your own)", time: "1pm – 2pm", location: "ISyE Main Atrium 2nd Floor" },
+      { title: "Closing Ceremony", time: "3pm – 4pm", location: "Instructional Center 103" },
     ],
   },
 ];
@@ -110,6 +112,16 @@ export function Schedule() {
         <p className="text-center font-mono text-xs tracking-[0.15em] uppercase text-[var(--text-muted)] mb-12">
           Tentative — subject to change
         </p>
+        <div className="flex justify-center mb-10">
+          <a
+            href={latestScheduleUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex px-5 py-2 rounded-full border border-violet-500/30 text-violet-200 font-mono text-[11px] uppercase tracking-wider hover:bg-violet-500/10 transition-colors duration-300"
+          >
+            View Latest Schedule on Notion
+          </a>
+        </div>
 
         {/* Day Tabs */}
         <div className="flex justify-center gap-3 mb-10">
@@ -213,7 +225,7 @@ export function Schedule() {
             {/* Decorative bg image */}
             <div className="absolute inset-0 opacity-[0.04] pointer-events-none">
               <img
-                src="/imgt26-branding-kit-2/monalisaAVP.png"
+                src="/brand_kit/ImmerseGT Circles.png"
                 alt=""
                 className="w-full h-full object-cover"
                 aria-hidden="true"
@@ -227,6 +239,16 @@ export function Schedule() {
               <p className="mt-2 mb-5 font-mono text-xs tracking-wider text-[var(--text-muted)] text-center uppercase">
                 755 Ferst Dr NW, Atlanta, GA 30332
               </p>
+              <div className="mb-4 text-center">
+                <a
+                  href={latestScheduleUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex px-4 py-2 rounded-full border border-violet-500/25 text-violet-200 font-mono text-[10px] uppercase tracking-wider hover:bg-violet-500/10 transition-colors duration-300"
+                >
+                  Latest updates on Notion
+                </a>
+              </div>
               <div className="w-full h-[300px] sm:h-[360px] overflow-hidden rounded-lg border border-violet-500/10">
                 <iframe
                   title="Klaus Atrium Map"

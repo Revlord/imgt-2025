@@ -22,9 +22,9 @@ const Navbar = () => {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 flex items-center">
             <img
-              src="/ImmerseGTlogo.svg"
+              src="/brand_kit/ImmerseGT Logo - White.png"
               alt="ImmerseGT"
-              className="h-20 w-auto"
+              className="h-8 w-auto object-contain"
             />
           </Link>
 

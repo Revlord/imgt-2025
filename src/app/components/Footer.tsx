@@ -13,11 +13,11 @@ const Footer = () => {
             <Link href="/" className="inline-block mb-5">
               <motion.div whileHover={{ rotate: 360 }} transition={{ duration: 1.2 }}>
                 <Image
-                  src="/ImmerseLogo.svg"
+                  src="/brand_kit/ImmerseGT Logo - White.png"
                   alt="ImmerseGT"
                   width={200}
-                  height={100}
-                  className="h-auto w-[140px] sm:w-[160px] md:w-[180px] opacity-80"
+                  height={60}
+                  className="h-auto w-[120px] sm:w-[140px] md:w-[160px] opacity-80"
                 />
               </motion.div>
             </Link>

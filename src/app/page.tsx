@@ -4,10 +4,7 @@ import { Judges } from "./components/Judges";
 import { PhotoCarousel } from "./components/CarouselPhotos";
 import { Schedule } from "./components/Schedule";
 import FAQPage from "./components/FAQ";
-import {
-  DavidInterlude,
-  SistineInterlude,
-} from "./components/ImageInterlude";
+import { EyesInterlude, CirclesInterlude } from "./components/ImageInterlude";
 
 export default function Home() {
   return (
@@ -20,8 +17,8 @@ export default function Home() {
         <Sponsors />
       </div>
 
-      {/* Visual break — David with VR headset */}
-      <DavidInterlude />
+      {/* Visual break — VR headset eyes closeup */}
+      <EyesInterlude />
 
       <div id="speakers">
         <Judges />
@@ -35,8 +32,8 @@ export default function Home() {
         <Schedule />
       </div>
 
-      {/* Visual break — Sistine Chapel wide banner */}
-      <SistineInterlude />
+      {/* Visual break — Concentric circles */}
+      <CirclesInterlude />
 
       <div id="faq">
         <FAQPage />
