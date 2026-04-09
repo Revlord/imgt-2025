@@ -10,13 +10,13 @@ const titleSponsors = [
 
 const sponsors = [
   { src: "/im26-logos/Astec-Digital-Logo-HORZ-White.png", alt: "Astec Digital", href: "https://www.astecdigital.com/" },
-  { src: "/im26-logos/RavenResonance_logo_white.png", alt: "Raven Resonance", href: "#" },
+  { src: "/im26-logos/RavenResonance_logo_white.png", alt: "Raven Resonance", href: "https://raven.computer/" },
   { src: "/im26-logos/gt-create-x_logo_white.png", alt: "Create-X", href: "https://create-x.gatech.edu/" },
 ];
 
 const communityPartners = [
-  { src: "/im26-logos/XRB_logo_white.png", alt: "XR Bootcamp", href: "#" },
-  { src: "/im26-logos/SensAI_logo_white.png", alt: "SensAI Hackathon", href: "#" },
+  { src: "/im26-logos/XRB_logo_white.png", alt: "XR Bootcamp", href: "https://xrbootcamp.com/" },
+  { src: "/im26-logos/SensAI_logo_white.png", alt: "SensAI Hackathon", href: "https://sensaihack.com/" },
   { src: "/im26-logos/AWE_logo_white.png", alt: "AWE", href: "https://www.awexr.com/" },
   { src: "/im26-logos/mlh_logo_white.png", alt: "Major League Hacking", href: "https://mlh.io" },
   { src: "/im26-logos/Pure-Buttons-logo.png", alt: "Pure Buttons", href: "https://www.purebuttons.com/" },
