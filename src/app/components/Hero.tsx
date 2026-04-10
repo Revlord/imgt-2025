@@ -137,7 +137,7 @@ export function ShootingStarsAndStarsBackgroundDemo() {
         </p>
 
         <Link
-          href="https://maps.app.goo.gl/5vq8PS9r7BEFuR5v8"
+          href="https://maps.app.goo.gl/rmAGpXqvWd1XKQBUA"
           className="mt-4 hover:scale-105 transition-transform duration-300"
         >
           <p className="font-mono text-xs md:text-sm tracking-[0.15em] uppercase text-violet-300/60">
